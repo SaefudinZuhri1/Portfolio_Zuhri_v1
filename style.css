@@ -1,0 +1,247 @@
+:root {
+  --red: rgb(170, 30, 50);
+  --blue: rgb(60, 80, 130);
+  --grey: rgb(50, 55, 60);
+  --key: rgb(20, 20, 20);
+}
+
+
+/* Body */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body Akhir */
+
+/* Navbar Awal */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--red);
+  box-shadow: 0px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  z-index: 1;
+}
+
+.navbar-link {
+  text-align: center;
+  vertical-align: center;
+  padding: 15px 21px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar-link:last-of-type {
+  margin-right: 20px;
+}
+
+.navbar-link:hover {
+  background-color: var(--grey);
+}
+
+/* Akhir Navbar */
+
+/* Section Home */
+
+#home {
+  padding-top: 80px;
+  height: 1080px;
+  margin: 0;
+  background: linear-gradient(60deg, var(--blue), var(--key));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 500;
+}
+
+#ws-home {
+  color: var(--red);
+  margin: 0;
+  font-size: 32px;
+}
+
+#portofolio {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--red);
+  padding-top: 70px;
+}
+
+#judul-portofolio {
+  margin: 0;
+  text-align: center;
+  font-size: 34px;
+  color: white;
+}
+
+hr {
+  color: white;
+  margin: 0 auto 74px;
+}
+
+#portofolio-grid {
+  width: calc(100% - 48%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 26px;
+  justify-content: center;
+}
+
+.judul-portofolio-2 {
+  background-color: var(--grey);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.judul-portofolio-2 img {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.judul-portofolio-2 p {
+  text-align: center;
+  vertical-align: center;
+  color: white;
+}
+
+p::before {
+  content: "< ";
+  color: rgba(255, 100, 50, 0);
+  position: absolute;
+  transform: translateX(-16px);
+  transition: color 0.2s linear;
+}
+
+p::after {
+  content: "/>";
+  color: rgba(255, 100, 50, 0);
+  position: absolute;
+  transform: translateX(6px);
+  transition: color 0.2s linear;
+}
+
+.judul-portofolio-2:hover p::before {
+  color: rgba(255, 100, 50, 1);
+}
+
+.judul-portofolio-2:hover p::after {
+  color: rgba(255, 100, 50, 1);
+}
+
+.btn {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.lihat-lebih {
+  padding: 8px 32px 8px 12px;
+  background-color: var(--grey);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.lihat-lebih:hover {
+  background-color: var(--blue);
+}
+
+#tanda-panah {
+  font-weight: 400;
+  vertical-align: center;
+  position: absolute;
+  transform: translateX(7px) scale(1.8,1.8);
+  transition: transform 0.2s ease-in-out;
+}
+
+.lihat-lebih:hover #tanda-panah{
+  transform: translateX(9px) scale(1.8,1.8);
+}
+
+#kontak {
+  height: 1080px;
+  margin: 0;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#judul-kontak {
+  font-size: 52px;
+  color: whitesmoke;
+  margin: 0;
+}
+
+#desk-kontak {
+  color: whitesmoke;
+  font-size: 22px;
+  margin: 0;
+}
+
+#media-sosial {
+  color: skyblue;
+  text-decoration: none;
+  font-size: 28px;
+  margin-top: 68px;
+  margin-bottom: -20px;
+  text-shadow: 2px 2px blueviolet;
+  transition: transform 0.8s ease-out;
+}
+
+#media-sosial:hover {
+  transform: translateY(12px);
+}
+
+footer {
+  background-color: var(--red);
+  color: white;
+  text-align: center;
+  height: 60px;
+  font-size: 24px;
+}
+
+@media(max-width: 1080px) {
+  #portofolio-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 600px) {
+  #portofolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
